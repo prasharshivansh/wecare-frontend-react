@@ -46,7 +46,11 @@ const Home = () => {
                 >
                   Login as a Coach
                 </Button>
-                <Button variant="contained" sx={{ backgroundColor: "#00B0FF" }}>
+                <Button
+                  href="/coachsignup"
+                  variant="contained"
+                  sx={{ backgroundColor: "#00B0FF" }}
+                >
                   Join as a Coach
                 </Button>
               </CardContent>
