@@ -12,8 +12,8 @@ import {
   ValidatePhoneNumber,
   ValidateSpeciality,
 } from "../Utils/Validator";
-import CoachSuccessPage from "./CoachSuccessPage";
-import { grey, pink } from "@mui/material/colors";
+import CoachSuccessPage from "./Coachsuccesspage";
+import { grey } from "@mui/material/colors";
 const Coachsignup = () => {
   const [formData, setFormData] = useState({
     name: "",
@@ -172,10 +172,7 @@ const Coachsignup = () => {
   };
 
   return (
-    <div
-      className="container"
-      style={{ width: "100%", padding: "20rem" }}
-    >
+    <div className="container" style={{ width: "100%", padding: "20rem" }}>
       {successMessage ? (
         <CoachSuccessPage coachSuccessMesssage={successMessage} />
       ) : (
@@ -183,6 +180,7 @@ const Coachsignup = () => {
           onSubmit={(e) => {
             handleSubmit(e);
           }}
+          className="bg-black p-5"
         >
           {errMessage && (
             <Row className="flex justify-center align-middle">
@@ -196,8 +194,11 @@ const Coachsignup = () => {
             </Row>
           )}
           <Row className="flex flex-nowrap justify-center">
-            <PersonIcon sx={{ fontSize: 80,color:grey[500] }} className="justify-center align-middle"></PersonIcon>
-            <h1 className="text-white mt-8">Life coach</h1>
+            <PersonIcon
+              sx={{ fontSize: 80, color: grey[500] , paddingBottom: 4}}
+              className="justify-center align-middle"
+            ></PersonIcon>
+          <h1 className="text-white text-2xl mt-8">Life Coach</h1>
           </Row>
           <Row className="mb-3">
             <Form.Group as={Col} controlId="name">

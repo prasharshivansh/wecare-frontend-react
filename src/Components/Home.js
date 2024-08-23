@@ -41,6 +41,7 @@ const Home = () => {
                   />
                 </Box>
                 <Button
+                  href="/coachlogin"
                   variant="contained"
                   sx={{ mb: 1, backgroundColor: "#00B0FF" }}
                 >
