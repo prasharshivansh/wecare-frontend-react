@@ -6,6 +6,8 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Home from "./Home";
 import Coachsignup from "./Coachsignup";
 import Coachloginpage from "./Coachloginpage";
+import { Link } from "@mui/material";
+import Usersignup from "./Usersignup";
 const Navbar = (props) => {
   const [navState, setNavState] = useState({
     logged_userId: sessionStorage.getItem("userId"),
@@ -29,7 +31,11 @@ const Navbar = (props) => {
     >
       <Router>
         <nav className="navbar">
-          <div className="navbar-brand">WeCare</div>
+          <div className="navbar-brand text-white">
+            <Link href="/" underline="none" className="text-white">
+              WeCare
+            </Link>
+          </div>
           <ul className="navbar-nav">
             {navState.logged_userId || navState.logged_coachId ? (
               <>
@@ -58,7 +64,7 @@ const Navbar = (props) => {
           <Route exact path="/" element={<Home />} />
           <Route path="/coachsignup" element={<Coachsignup />} />
           <Route path="/coachlogin" element={<Coachloginpage />} />
-          <Route path="/usersignup" element={<Home />} />
+          <Route path="/usersignup" element={<Usersignup />} />
           <Route path="/userlogin" element={<Home />} />
           <Route path="/coachhome" element={<Home />} />
           <Route path="/userhome" element={<Home />} />

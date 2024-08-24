@@ -81,7 +81,7 @@ const Home = () => {
                 >
                   Login as a User
                 </Button>
-                <Button variant="contained" sx={{ backgroundColor: "#00B0FF" }}>
+                <Button href="/usersignup" variant="contained" sx={{ backgroundColor: "#00B0FF" }}>
                   Join as a User
                 </Button>
               </CardContent>

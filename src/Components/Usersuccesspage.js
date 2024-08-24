@@ -1,0 +1,30 @@
+import React from "react";
+import { Container, Row, Col, Image, Button } from "react-bootstrap";
+
+const Usersuccesspage = ({ userSuccessMessage }) => {
+  return (
+    <Container className="bg-gray-100">
+      <Row className="justify-content-center mt-5">
+        <Col xs={12} md={6}>
+          <Image
+            style={{ marginLeft: "5rem" }}
+            src="data:image/jpeg;base64,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"
+            alt="User"
+            fluid
+          />
+          <h1 className="text-black text-center mt-3">
+            Account created successfully
+          </h1>
+          <p className="text-black text-center">{userSuccessMessage}</p>
+          <div className="text-center mt-3">
+            <Button variant="primary" size="lg">
+              Login Now
+            </Button>
+          </div>
+        </Col>
+      </Row>
+    </Container>
+  );
+};
+
+export default Usersuccesspage;
